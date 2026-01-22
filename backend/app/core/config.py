@@ -10,8 +10,8 @@ class Settings(BaseSettings):
     SECRET_KEY: str = "your-secret-key-here"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 8  # 8 days
 
-    # Database
-    DATABASE_URL: str = "postgresql://user:password@localhost/ott_platform"
+    # Database - Use SQLite for testing/demo
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./ott_platform.db")
 
     # CORS
     BACKEND_CORS_ORIGINS: List[str] = ["http://localhost:3000"]
