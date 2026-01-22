@@ -169,6 +169,15 @@ cd frontend
 npm run lint
 ```
 
+### Automated Testing Scripts
+```bash
+# Test the entire platform
+python scripts/test_api.py
+node scripts/test_frontend.js
+```
+
+For detailed testing instructions, see [docs/testing.md](docs/testing.md).
+
 ## Deployment
 
 For production deployment instructions, see [docs/deployment.md](docs/deployment.md).
